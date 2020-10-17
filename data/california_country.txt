@@ -1,3 +1,159 @@
+Inyo County, CA"	06027	"Fresno County, CA"	06019
+		"Inyo County, CA"	06027
+		"Kern County, CA"	06029
+		"Mono County, CA"	06051
+		"San Bernardino County, CA"	06071
+		"Tulare County, CA"	06107
+		"Clark County, NV"	32003
+		"Esmeralda County, NV"	32009
+		"Nye County, NV"	32023
+"Kern County, CA"	06029	"Inyo County, CA"	06027
+		"Kern County, CA"	06029
+		"Kings County, CA"	06031
+		"Los Angeles County, CA"	06037
+		"San Bernardino County, CA"	06071
+		"San Luis Obispo County, CA"	06079
+		"Santa Barbara County, CA"	06083
+		"Tulare County, CA"	06107
+		"Ventura County, CA"	06111
+"Kings County, CA"	06031	"Fresno County, CA"	06019
+		"Kern County, CA"	06029
+		"Kings County, CA"	06031
+		"Monterey County, CA"	06053
+		"San Luis Obispo County, CA"	06079
+		"Tulare County, CA"	06107
+"Lake County, CA"	06033	"Colusa County, CA"	06011
+		"Glenn County, CA"	06021
+		"Lake County, CA"	06033
+		"Mendocino County, CA"	06045
+		"Napa County, CA"	06055
+		"Sonoma County, CA"	06097
+		"Yolo County, CA"	06113
+"Lassen County, CA"	06035	"Lassen County, CA"	06035
+		"Modoc County, CA"	06049
+		"Plumas County, CA"	06063
+		"Shasta County, CA"	06089
+		"Sierra County, CA"	06091
+		"Washoe County, NV"	32031
+"Los Angeles County, CA"	06037	"Kern County, CA"	06029
+		"Los Angeles County, CA"	06037
+		"Orange County, CA"	06059
+		"San Bernardino County, CA"	06071
+		"Ventura County, CA"	06111
+"Madera County, CA"	06039	"Fresno County, CA"	06019
+		"Madera County, CA"	06039
+		"Mariposa County, CA"	06043
+		"Merced County, CA"	06047
+		"Mono County, CA"	06051
+		"Tuolumne County, CA"	06109
+"Marin County, CA"	06041	"Contra Costa County, CA"	06013
+		"Marin County, CA"	06041
+		"San Francisco County, CA"	06075
+		"Solano County, CA"	06095
+		"Sonoma County, CA"	06097
+"Mariposa County, CA"	06043	"Madera County, CA"	06039
+		"Mariposa County, CA"	06043
+		"Merced County, CA"	06047
+		"Stanislaus County, CA"	06099
+		"Tuolumne County, CA"	06109
+"Mendocino County, CA"	06045	"Glenn County, CA"	06021
+		"Humboldt County, CA"	06023
+		"Lake County, CA"	06033
+		"Mendocino County, CA"	06045
+		"Sonoma County, CA"	06097
+		"Tehama County, CA"	06103
+		"Trinity County, CA"	06105
+"Merced County, CA"	06047	"Fresno County, CA"	06019
+		"Madera County, CA"	06039
+		"Mariposa County, CA"	06043
+		"Merced County, CA"	06047
+		"San Benito County, CA"	06069
+		"Santa Clara County, CA"	06085
+		"Stanislaus County, CA"	06099
+"Modoc County, CA"	06049	"Lassen County, CA"	06035
+		"Modoc County, CA"	06049
+		"Shasta County, CA"	06089
+		"Siskiyou County, CA"	06093
+		"Washoe County, NV"	32031
+		"Klamath County, OR"	41035
+		"Lake County, OR"	41037
+"Mono County, CA"	06051	"Alpine County, CA"	06003
+		"Fresno County, CA"	06019
+		"Inyo County, CA"	06027
+		"Madera County, CA"	06039
+		"Mono County, CA"	06051
+		"Tuolumne County, CA"	06109
+		"Douglas County, NV"	32005
+		"Esmeralda County, NV"	32009
+		"Lyon County, NV"	32019
+		"Mineral County, NV"	32021
+"Monterey County, CA"	06053	"Fresno County, CA"	06019
+		"Kings County, CA"	06031
+		"Monterey County, CA"	06053
+		"San Benito County, CA"	06069
+		"San Luis Obispo County, CA"	06079
+		"Santa Cruz County, CA"	06087
+"Napa County, CA"	06055	"Lake County, CA"	06033
+		"Napa County, CA"	06055
+		"Solano County, CA"	06095
+		"Sonoma County, CA"	06097
+		"Yolo County, CA"	06113
+"Nevada County, CA"	06057	"Nevada County, CA"	06057
+		"Placer County, CA"	06061
+		"Sierra County, CA"	06091
+		"Yuba County, CA"	06115
+		"Washoe County, NV"	32031
+"Orange County, CA"	06059	"Los Angeles County, CA"	06037
+		"Orange County, CA"	06059
+		"Riverside County, CA"	06065
+		"San Bernardino County, CA"	06071
+		"San Diego County, CA"	06073
+"Placer County, CA"	06061	"El Dorado County, CA"	06017
+		"Nevada County, CA"	06057
+		"Placer County, CA"	06061
+		"Sacramento County, CA"	06067
+		"Sutter County, CA"	06101
+		"Yuba County, CA"	06115
+		"Douglas County, NV"	32005
+		"Washoe County, NV"	32031
+		"Carson City, NV"	32510
+"Plumas County, CA"	06063	"Butte County, CA"	06007
+		"Lassen County, CA"	06035
+		"Plumas County, CA"	06063
+		"Shasta County, CA"	06089
+		"Sierra County, CA"	06091
+		"Tehama County, CA"	06103
+		"Yuba County, CA"	06115
+"Riverside County, CA"	06065	"La Paz County, AZ"	04012
+		"Imperial County, CA"	06025
+		"Orange County, CA"	06059
+		"Riverside County, CA"	06065
+		"San Bernardino County, CA"	06071
+		"San Diego County, CA"	06073
+"Sacramento County, CA"	06067	"Amador County, CA"	06005
+		"Contra Costa County, CA"	06013
+		"El Dorado County, CA"	06017
+		"Placer County, CA"	06061
+		"Sacramento County, CA"	06067
+		"San Joaquin County, CA"	06077
+		"Solano County, CA"	06095
+		"Sutter County, CA"	06101
+		"Yolo County, CA"	06113
+"San Benito County, CA"	06069	"Fresno County, CA"	06019
+		"Merced County, CA"	06047
+		"Monterey County, CA"	06053
+		"San Benito County, CA"	06069
+		"Santa Clara County, CA"	06085
+		"Santa Cruz County, CA"	06087
+"San Bernardino County, CA"	06071	"La Paz County, AZ"	04012
+		"Mohave County, AZ"	04015
+		"Inyo County, CA"	06027
+		"Kern County, CA"	06029
+		"Los Angeles County, CA"	06037
+		"Orange County, CA"	06059
+		"Riverside County, CA"	06065
+		"San Bernardino County, CA"	06071
+		"Clark County, NV"	32003
 "San Diego County, CA"	06073	"Imperial County, CA"	06025
 		"Orange County, CA"	06059
 		"Riverside County, CA"	06065
