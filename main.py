@@ -43,9 +43,9 @@ print('Adjacency List:\n', adjlists, '\n\n')
 print('Properties Matrix:\n', properties_matrix, '\n\n')
 print('Labels Matrix:\n', labels_matrix, '\n\n')
 
-properties_matrix_training = csr_matrix(properties_matrix[:12][:],dtype=np.intc)
-properties_matrix_testing = csr_matrix(properties_matrix[12:][:],dtype=np.intc)
-properties_matrix = csr_matrix(properties_matrix,dtype=np.intc)
+properties_matrix_training = csr_matrix(properties_matrix[:12][:],dtype=np.int16)
+properties_matrix_testing = csr_matrix(properties_matrix[12:][:],dtype=np.int16)
+properties_matrix = csr_matrix(properties_matrix,dtype=np.int16)
 
 print('Properties Training Matrix\n', properties_matrix_training)
 print('Properties Testing Matrix\n', properties_matrix_testing)
@@ -57,12 +57,13 @@ print('Labels Training Matrix\n', labels_matrix_training)
 print('Labels Testing Matrix\n', labels_matrix_testing)
 
 # saving files
-save_sparse_matrix(properties_matrix_training, './gcn/gcn/data/ind.covid.x')
-save_sparse_matrix(properties_matrix_training, './gcn/gcn/data/ind.covid.tx')
-save_sparse_matrix(properties_matrix, './gcn/gcn/data/ind.covid.allx')
+save_objects(properties_matrix_training, './gcn/gcn/data/ind.covid.x')
+save_objects(properties_matrix_training, './gcn/gcn/data/ind.covid.tx')
+save_objects(properties_matrix, './gcn/gcn/data/ind.covid.allx')
 
 save_objects(labels_matrix_training,'./gcn/gcn/data/ind.covid.y')
 save_objects(labels_matrix_testing,'./gcn/gcn/data/ind.covid.ty')
 save_objects(labels_matrix,'./gcn/gcn/data/ind.covid.ally')
 
-save_obecjts(adjlists,'./gcn/gcn/data/ind.covid.graph')
+save_objects(adjlists,'./gcn/gcn/data/ind.covid.graph')
+
