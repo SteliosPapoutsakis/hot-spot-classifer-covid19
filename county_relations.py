@@ -1,10 +1,5 @@
 
 
-class DayValue:
-    def __init__(self, newcases, newdeaths):
-        self.newcases = newcases
-        self.newdeaths = newdeaths
-
 class County:
     def __init__(self, name, id, state):
         self.name = name
@@ -13,8 +8,9 @@ class County:
         self.neighbors = []
         self.numDeaths = 0
         self.numCases = 0
+        self.newcases = [0] * 30
+        self.newdeaths = [0] * 30
     
-
     def add_neighbor(self, neighbor):
         self.neighbors.append(neighbor)
 
@@ -25,9 +21,15 @@ class County:
             adjlist.append(index)
         return adjlist
 
-    '''def return_tuple:
-        return (name, )
-        '''
+    def return_tuple(self):
+        result = (self.name
+            , self.numCases
+            , self.numDeaths)
+        for newcase in newcases:
+            result += newcase
+        for newdeath in newdeaths:
+            result += newdeath
+        return result
     
 
 def create_county_key(counties):
