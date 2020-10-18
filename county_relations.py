@@ -18,6 +18,7 @@ class County:
         self.numCases = 0
         self.newCases = [0] * 30
         self.newDeaths = [0] * 30
+        self.label = 0
     
     def add_neighbor(self, neighbor):
         self.neighbors.append(neighbor)
@@ -53,7 +54,7 @@ def create_adj_lists(sorted_counties, county_key):
     adjlists = {}
     #Create adj list
     for count in range(len(sorted_counties)):
-        #print(counties[count].id)
+        #print(sorted_counties[count].name)
         adjlists[count] = sorted_counties[count].get_neighbors(county_key)
 
     return adjlists

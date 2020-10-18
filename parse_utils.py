@@ -1,7 +1,8 @@
 from county_relations import County
 import re
 import pandas
-
+import csv
+import numpy as np
 
 rx_dict =  {
     'main_county': re.compile(r'"(?P<name>([a-z]|[A-Z]| )+) County, (?P<state>[A-Z]+)"\t+(?P<id>[0-9]+)\t+"(?P<adj_name>([a-z]|[A-Z]| )+) County, (?P<adj_state>[A-Z]+)"\t+(?P<adj_id>[0-9]+)$'),
@@ -64,4 +65,23 @@ def parse_county_adj(filepath):
 
             line = adjfile.readline()
     return counties
+
+def parse_labels(filename, counties):
+    with open(filename, newline='') as labelfile:
+        labelreader = csv.reader(labelfile)
+        for row in labelreader:
+            for c in counties:
+                if c.name == row[0]:
+                    c.label = row[1]
+    return counties
+
+def create_labels_matrix(counties):
+    A = np.zeros((len(counties), 2))
+    for index in range(len(counties)):
+        if counties[index].label == '1':
+            A[index] = [0, 1]
+        else:
+            A[index] = [1, 0]
+    return A
+
 

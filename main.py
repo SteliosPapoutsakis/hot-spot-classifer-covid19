@@ -1,4 +1,4 @@
-from parse_utils import parse_county_adj
+from parse_utils import *
 from county_relations import *
 
 import numpy as np
@@ -11,17 +11,22 @@ counties = []
 
 
 counties = parse_county_adj('./data/california_counties.txt') 
-#Retrieve other information
 
-sorted_counties = sorted(counties, key=lambda c: c.name)
+
+counties = sorted(counties, key=lambda c: c.name)
+#Retrieve other information
+counties = parse_labels('./data/hotspot_info.csv', counties)
+
 county_key = create_county_key(counties)
 
-adjlists = create_adj_lists(sorted_counties, county_key)
+adjlists = create_adj_lists(counties, county_key)
 
-properties_matrix = create_properties_matrix(sorted_counties)
+properties_matrix = create_properties_matrix(counties)
+labels_matrix = create_labels_matrix(counties)
 
 '''
 Final Results
 '''
 print('Adjacency List:\n', adjlists, '\n\n')
 print('Properties Matrix:\n', properties_matrix, '\n\n')
+print('Labels Matrix:\n', labels_matrix, '\n\n')
