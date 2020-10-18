@@ -33,10 +33,10 @@ class County:
 
     def return_tuple(self):
         result = (
-              int(float(self.numCases))
-            , int(float(self.numDeaths)))
+              float(self.numCases)
+            , float(self.numDeaths))
         for i in range(len(self.newCases)):
-            result = result + (int(float(self.newCases[i])), int(float(self.newDeaths[i])))
+            result = result + (float(self.newCases[i]), float(self.newDeaths[i]))
 
         return result
     

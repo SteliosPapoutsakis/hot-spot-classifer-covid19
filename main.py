@@ -54,3 +54,6 @@ labels_matrix_testing = labels_matrix[12:24][:]
 
 print('Labels Training Matrix\n', labels_matrix_training)
 print('Labels Testing Matrix\n', labels_matrix_testing)
+
+
+#print(np.array(properties_matrix.sum(1)))
