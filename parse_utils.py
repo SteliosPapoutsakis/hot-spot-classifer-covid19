@@ -2,6 +2,7 @@ from county_relations import County
 import re
 import pandas
 
+
 rx_dict =  {
     'main_county': re.compile(r'"(?P<name>([a-z]|[A-Z]| )+) County, (?P<state>[A-Z]+)"\t+(?P<id>[0-9]+)\t+"(?P<adj_name>([a-z]|[A-Z]| )+) County, (?P<adj_state>[A-Z]+)"\t+(?P<adj_id>[0-9]+)$'),
     'adjacent_county': re.compile(r'\t+"(?P<adj_name>([a-z]|[A-Z]| )+) County, (?P<adj_state>[A-Z]+)"\t+(?P<adj_id>[0-9]+)$')

@@ -3,6 +3,9 @@ from county_relations import *
 
 import numpy as np
 
+# load coo_matrix from Scipy.sparse module
+from scipy.sparse import coo_matrix
+
 counties = []
 
 

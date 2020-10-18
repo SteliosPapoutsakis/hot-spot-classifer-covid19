@@ -1,4 +1,6 @@
 import numpy as np
+# load coo_matrix from Scipy.sparse module
+from scipy.sparse import coo_matrix
 '''
 # of Deaths
 # of Cases
@@ -64,4 +66,4 @@ def create_properties_matrix(sorted_counties):
         #print(county.return_tuple())
 
     properties_matrix = np.array(properties)
-    return properties_matrix
+    return coo_matrix(properties_matrix)
