@@ -43,15 +43,15 @@ print('Adjacency List:\n', adjlists, '\n\n')
 print('Properties Matrix:\n', properties_matrix, '\n\n')
 print('Labels Matrix:\n', labels_matrix, '\n\n')
 
-properties_matrix_training = csr_matrix(properties_matrix[:12][:],dtype=np.int16)
-properties_matrix_testing = csr_matrix(properties_matrix[12:][:],dtype=np.int16)
-properties_matrix = csr_matrix(properties_matrix,dtype=np.int16)
+properties_matrix_training = csr_matrix(properties_matrix[:12][:], dtype=np.float64)
+properties_matrix_testing = csr_matrix(properties_matrix[12:24][:], dtype=np.float64)
+properties_matrix = csr_matrix(properties_matrix,dtype=np.float64)
 
 print('Properties Training Matrix\n', properties_matrix_training)
 print('Properties Testing Matrix\n', properties_matrix_testing)
 
 labels_matrix_training = labels_matrix[:12][:]
-labels_matrix_testing = labels_matrix[12:][:]
+labels_matrix_testing = labels_matrix[12:24][:]
 
 print('Labels Training Matrix\n', labels_matrix_training)
 print('Labels Testing Matrix\n', labels_matrix_testing)
