@@ -76,6 +76,11 @@
 		"Mendocino County, CA"	06045
 		"Siskiyou County, CA"	06093
 		"Trinity County, CA"	06105
+"Imperial County, CA"	06025	"La Paz County, AZ"	04012
+		"Yuma County, AZ"	04027
+		"Imperial County, CA"	06025
+		"Riverside County, CA"	06065
+		"San Diego County, CA"	06073
 "Inyo County, CA"	06027	"Fresno County, CA"	06019
 		"Inyo County, CA"	06027
 		"Kern County, CA"	06029
