@@ -36,7 +36,7 @@ def parse_county_adj(filepath):
                 state = match.group('state')
 
                 county = County(name, id, state)
-                print("Created County: ", county.name)
+                #print("Created County: ", county.name)
 
                 adj_name = match.group('adj_name')
                 adj_id = match.group('adj_id')
