@@ -6,13 +6,22 @@ counties = []
 
 
 counties = parse_county_adj('./data/california_counties.txt') 
+#Retrieve other information
+
+
+Adddeathinformat()
+addday
 sorted_counties = sorted(counties, key=lambda c: c.name)
 county_key = create_county_key(counties)
 adjlists = {}
 #Create adj list
 for count in range(len(sorted_counties)):
     adjlists[count] = sorted_counties[count].get_neighbors(county_key)
-    print(count, ' ', adjlists[count])
+    print(count, ': ', adjlists[count])
+
+#Create tuple of information
+
+
 
 
 
