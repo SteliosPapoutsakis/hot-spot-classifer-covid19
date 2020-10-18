@@ -16,3 +16,11 @@ class County:
 
     def add_neighbor(self, neighbor):
         self.neighbors.append(neighbor)
+
+    def get_neighbors(self, idtoindex):
+        adjlist = []
+        for n in self.neighbors:
+            index = idtoindex[n.id]
+            adjlist.append(index)
+    
+

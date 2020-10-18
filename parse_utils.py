@@ -31,7 +31,6 @@ def parse_county_adj(filepath):
             key, match = parse_line(line)
             print(line)
             if key == 'main_county':
-                print('a')
                 name = match.group('name')
                 id = match.group('id')
                 state = match.group('state')
@@ -51,7 +50,6 @@ def parse_county_adj(filepath):
                 counties.append(county)
             
             if key == 'adjacent_county':
-                print('b')
                 adj_name = match.group('adj_name')
                 adj_id = match.group('adj_id')
                 adj_state = match.group('adj_state')
