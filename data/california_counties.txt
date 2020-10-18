@@ -1,3 +1,81 @@
+"Alameda County, CA"	06001	"Alameda County, CA"	06001
+		"Contra Costa County, CA"	06013
+		"San Francisco County, CA"	06075
+		"San Joaquin County, CA"	06077
+		"San Mateo County, CA"	06081
+		"Santa Clara County, CA"	06085
+		"Stanislaus County, CA"	06099
+"Alpine County, CA"	06003	"Alpine County, CA"	06003
+		"Amador County, CA"	06005
+		"Calaveras County, CA"	06009
+		"El Dorado County, CA"	06017
+		"Mono County, CA"	06051
+		"Tuolumne County, CA"	06109
+		"Douglas County, NV"	32005
+"Amador County, CA"	06005	"Alpine County, CA"	06003
+		"Amador County, CA"	06005
+		"Calaveras County, CA"	06009
+		"El Dorado County, CA"	06017
+		"Sacramento County, CA"	06067
+		"San Joaquin County, CA"	06077
+"Butte County, CA"	06007	"Butte County, CA"	06007
+		"Colusa County, CA"	06011
+		"Glenn County, CA"	06021
+		"Plumas County, CA"	06063
+		"Sutter County, CA"	06101
+		"Tehama County, CA"	06103
+		"Yuba County, CA"	06115
+"Calaveras County, CA"	06009	"Alpine County, CA"	06003
+		"Amador County, CA"	06005
+		"Calaveras County, CA"	06009
+		"San Joaquin County, CA"	06077
+		"Stanislaus County, CA"	06099
+		"Tuolumne County, CA"	06109
+"Colusa County, CA"	06011	"Butte County, CA"	06007
+		"Colusa County, CA"	06011
+		"Glenn County, CA"	06021
+		"Lake County, CA"	06033
+		"Sutter County, CA"	06101
+		"Yolo County, CA"	06113
+"Contra Costa County, CA"	06013	"Alameda County, CA"	06001
+		"Contra Costa County, CA"	06013
+		"Marin County, CA"	06041
+		"Sacramento County, CA"	06067
+		"San Francisco County, CA"	06075
+		"San Joaquin County, CA"	06077
+		"Solano County, CA"	06095
+		"Sonoma County, CA"	06097
+"Del Norte County, CA"	06015	"Del Norte County, CA"	06015
+		"Humboldt County, CA"	06023
+		"Siskiyou County, CA"	06093
+		"Curry County, OR"	41015
+		"Josephine County, OR"	41033
+"El Dorado County, CA"	06017	"Alpine County, CA"	06003
+		"Amador County, CA"	06005
+		"El Dorado County, CA"	06017
+		"Placer County, CA"	06061
+		"Sacramento County, CA"	06067
+		"Douglas County, NV"	32005
+"Fresno County, CA"	06019	"Fresno County, CA"	06019
+		"Inyo County, CA"	06027
+		"Kings County, CA"	06031
+		"Madera County, CA"	06039
+		"Merced County, CA"	06047
+		"Mono County, CA"	06051
+		"Monterey County, CA"	06053
+		"San Benito County, CA"	06069
+		"Tulare County, CA"	06107
+"Glenn County, CA"	06021	"Butte County, CA"	06007
+		"Colusa County, CA"	06011
+		"Glenn County, CA"	06021
+		"Lake County, CA"	06033
+		"Mendocino County, CA"	06045
+		"Tehama County, CA"	06103
+"Humboldt County, CA"	06023	"Del Norte County, CA"	06015
+		"Humboldt County, CA"	06023
+		"Mendocino County, CA"	06045
+		"Siskiyou County, CA"	06093
+		"Trinity County, CA"	06105
 "Inyo County, CA"	06027	"Fresno County, CA"	06019
 		"Inyo County, CA"	06027
 		"Kern County, CA"	06029

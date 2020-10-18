@@ -1,25 +1,18 @@
 from parse_utils import parse_county_adj
-from county_relations import County
+from county_relations import County, create_county_key
 
 counties = []
 
+
+
 counties = parse_county_adj('./data/california_counties.txt') 
-
-#sory by alphabetical
 sorted_counties = sorted(counties, key=lambda c: c.name)
-
-
-counties = {}
+county_key = create_county_key(counties)
 adjlists = {}
-count = 0
-#First Create list of all counties
-for county in sorted_counties:
-    counties[county.id] = (count, county)
-    print(county.name, ' ', count)
-
 #Create adj list
-count = 0
-for county in sorted_counties:
-    adjlists[count] = county.get_neighbors(idtoindex)
+for count in range(len(sorted_counties)):
+    adjlists[count] = sorted_counties[count].get_neighbors(county_key)
     print(count, ' ', adjlists[count])
-    count = count + 1
+
+
+

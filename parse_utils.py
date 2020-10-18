@@ -44,7 +44,8 @@ def parse_county_adj(filepath):
 
                 adj_county = County(adj_name, adj_id, adj_state)
                 
-                county.add_neighbor(adj_county)
+                if adj_county.state == 'CA':
+                    county.add_neighbor(adj_county)
                 print("Added Ajacent County: ", adj_county.name)
 
                 counties.append(county)
@@ -54,9 +55,11 @@ def parse_county_adj(filepath):
                 adj_id = match.group('adj_id')
                 adj_state = match.group('adj_state')
 
+                
                 adj_county = County(adj_name, adj_id, adj_state)
                 print("Added Ajacent County: ", adj_county.name)
-                county.add_neighbor(adj_county)
+                if adj_county.state == 'CA':
+                    county.add_neighbor(adj_county)
 
             line = adjfile.readline()
     return counties
