@@ -5,7 +5,7 @@ import numpy as np
 
 # load coo_matrix from Scipy.sparse module
 from scipy.sparse import csr_matrix
-
+from scipy import sparse as sp
 counties = []
 
 
@@ -39,26 +39,30 @@ labels_matrix = create_labels_matrix(counties)
 '''
 Final Results
 '''
-print('Adjacency List:\n', adjlists, '\n\n')
-print('Properties Matrix:\n', properties_matrix, '\n\n')
-print('Labels Matrix:\n', labels_matrix, '\n\n')
+#print('Adjacency List:\n', adjlists, '\n\n')
+#print('Properties Matrix:\n', properties_matrix, '\n\n')
+#print('Labels Matrix:\n', labels_matrix, '\n\n')
 
-properties_matrix_training = csr_matrix(properties_matrix[:6][:], dtype=np.float64)
-properties_matrix_testing = csr_matrix(properties_matrix[6:30][:], dtype=np.float64)
-properties_matrix = csr_matrix(properties_matrix,dtype=np.float64)
 
+properties_matrix_training = csr_matrix(properties_matrix[:8][:], dtype=np.float64)
+properties_matrix_testing = csr_matrix(properties_matrix[35:][:], dtype=np.float64)
+properties_matrix = csr_matrix(properties_matrix[:35],dtype=np.float64)
+features = sp.vstack((properties_matrix,properties_matrix_testing)).tolil()
 print('Properties Training Matrix\n', properties_matrix_training)
 print('Properties Testing Matrix\n', properties_matrix_testing)
 
-labels_matrix_training = labels_matrix[:6][:]
-labels_matrix_testing = labels_matrix[6:30][:]
+labels_matrix_training = labels_matrix[:8][:]
+labels_matrix_testing = labels_matrix[-22:][:]
+labels_matrix = labels_matrix[:-22][:]
 
-print('Labels Training Matrix\n', labels_matrix_training)
-print('Labels Testing Matrix\n', labels_matrix_testing)
+print(len(labels_matrix))
+print(len(labels_matrix_training))
+#print('Labels Training Matrix\n', labels_matrix_training)
+#print('Labels Testing Matrix\n', labels_matrix_testing)
 
 # saving files
 save_objects(properties_matrix_training, './gcn/gcn/data/ind.covid.x')
-save_objects(properties_matrix_training, './gcn/gcn/data/ind.covid.tx')
+save_objects(properties_matrix_testing, './gcn/gcn/data/ind.covid.tx')
 save_objects(properties_matrix, './gcn/gcn/data/ind.covid.allx')
 
 save_objects(labels_matrix_training,'./gcn/gcn/data/ind.covid.y')
