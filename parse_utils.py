@@ -90,8 +90,8 @@ def get_county_info(filepath, counties):
                     county_obj = county_obj[0]
 
                     if county_name_csv in county_objs.keys():
-                        county_obj.newcases[day_counter] = line[3]
-                        county_obj.newdeaths[day_counter] = line[4]
+                        county_obj.newCases[day_counter] = line[3]
+                        county_obj.newDeaths[day_counter] = line[4]
                         county_obj.numCases = line[1]
                         county_obj.numDeaths = line[2]
 
