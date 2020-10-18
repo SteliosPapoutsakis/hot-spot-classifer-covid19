@@ -55,6 +55,7 @@ def create_adj_lists(sorted_counties, county_key):
     adjlists = {}
     #Create adj list
     for count in range(len(sorted_counties)):
+        print(count)
         #print(sorted_counties[count].name)
         adjlists[count] = sorted_counties[count].get_neighbors(county_key)
 
