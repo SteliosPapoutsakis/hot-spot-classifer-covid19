@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 from parse_utils import *
-=======
-from parse_utils import parse_county_adj, get_county_info
-from county_relations import County, create_county_key
-from parse_utils import parse_county_adj
->>>>>>> 580e5407c50770f46f0d4c26688bcff4d6537aed
 from county_relations import *
 
 import numpy as np

@@ -4,11 +4,8 @@ import pickle
 import re
 import pandas
 import csv
-<<<<<<< HEAD
 import numpy as np
-=======
 
->>>>>>> 580e5407c50770f46f0d4c26688bcff4d6537aed
 
 rx_dict =  {
     'main_county': re.compile(r'"(?P<name>([a-z]|[A-Z]| )+) County, (?P<state>[A-Z]+)"\t+(?P<id>[0-9]+)\t+"(?P<adj_name>([a-z]|[A-Z]| )+) County, (?P<adj_state>[A-Z]+)"\t+(?P<adj_id>[0-9]+)$'),
