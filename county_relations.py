@@ -1,9 +1,4 @@
-'''
-# of Deaths
-# of Cases
-# New Cases per Day (last 30 days)
-# New Deaths per Day (last 30 days)
-'''
+
 
 class DayValue:
     def __init__(self, newcases, newdeaths):
