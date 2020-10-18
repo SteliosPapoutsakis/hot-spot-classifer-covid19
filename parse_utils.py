@@ -1,10 +1,10 @@
-from county_relations import DayValue, County
+from county_relations import County
 import re
 import pandas
 
 rx_dict =  {
-    'main_county': re.compile(r'"(?P<name>([a-z]|[A-Z]| )+), (?P<state>[A-Z]+)"\t+(?P<id>[0-9]+)\t+"(?P<adj_name>([a-z]|[A-Z]| )+), (?P<adj_state>[A-Z]+)"\t+(?P<adj_id>[0-9]+)$'),
-    'adjacent_county': re.compile(r'\t+"(?P<adj_name>([a-z]|[A-Z]| )+), (?P<adj_state>[A-Z]+)"\t+(?P<adj_id>[0-9]+)$')
+    'main_county': re.compile(r'"(?P<name>([a-z]|[A-Z]| )+) County, (?P<state>[A-Z]+)"\t+(?P<id>[0-9]+)\t+"(?P<adj_name>([a-z]|[A-Z]| )+) County, (?P<adj_state>[A-Z]+)"\t+(?P<adj_id>[0-9]+)$'),
+    'adjacent_county': re.compile(r'\t+"(?P<adj_name>([a-z]|[A-Z]| )+) County, (?P<adj_state>[A-Z]+)"\t+(?P<adj_id>[0-9]+)$')
 }
 
 
@@ -29,7 +29,7 @@ def parse_county_adj(filepath):
         county = None
         while line:
             key, match = parse_line(line)
-            print(line)
+            #print(line)
             if key == 'main_county':
                 name = match.group('name')
                 id = match.group('id')
@@ -46,7 +46,7 @@ def parse_county_adj(filepath):
                 
                 if adj_county.state == 'CA':
                     county.add_neighbor(adj_county)
-                print("Added Ajacent County: ", adj_county.name)
+                #print("Added Ajacent County: ", adj_county.name)
 
                 counties.append(county)
             
@@ -57,7 +57,7 @@ def parse_county_adj(filepath):
 
                 
                 adj_county = County(adj_name, adj_id, adj_state)
-                print("Added Ajacent County: ", adj_county.name)
+                #print("Added Ajacent County: ", adj_county.name)
                 if adj_county.state == 'CA':
                     county.add_neighbor(adj_county)
 
