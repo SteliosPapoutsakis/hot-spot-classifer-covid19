@@ -1,4 +1,6 @@
 from county_relations import County
+from scipy import sparse
+import pickle
 import re
 import pandas
 import csv
@@ -9,6 +11,13 @@ rx_dict =  {
     'adjacent_county': re.compile(r'\t+"(?P<adj_name>([a-z]|[A-Z]| )+) County, (?P<adj_state>[A-Z]+)"\t+(?P<adj_id>[0-9]+)$')
 }
 
+# functions for saving the objects
+def save_sparse_matrix(matrix, file_path):
+    sparse.save_npz(file_path, matrix)
+
+def save_objects(obj, file_path):
+    with open(file_path, 'wb') as f:
+        pickle.dump(obj, f)
 
 def parse_line(line):
     '''
