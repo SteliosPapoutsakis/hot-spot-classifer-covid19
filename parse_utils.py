@@ -1,6 +1,7 @@
 from county_relations import DayValue, County
 import re
 import pandas
+import csv
 
 rx_dict =  {
     'main_county': re.compile(r'"(?P<name>([a-z]|[A-Z]| )+), (?P<state>[A-Z]+)"\t+(?P<id>[0-9]+)\t+"(?P<adj_name>([a-z]|[A-Z]| )+), (?P<adj_state>[A-Z]+)"\t+(?P<adj_id>[0-9]+)$'),
@@ -64,3 +65,19 @@ def parse_county_adj(filepath):
             line = adjfile.readline()
     return counties
 
+'''
+# of Deaths
+# of Cases
+# New Cases per Day (last 30 days)
+# New Deaths per Day (last 30 days)
+'''
+
+def get_county_info(filepath):
+
+    with open (filepath) as csvfile:
+        reader = csv.reader(csvfile)
+        for line in reader:
+            
+            
+
+get_county_info("data\california_cases_filtered.csv")

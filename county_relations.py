@@ -1,6 +1,9 @@
-#import networkx as nx
-
-#G = nx.Graph()
+'''
+# of Deaths
+# of Cases
+# New Cases per Day (last 30 days)
+# New Deaths per Day (last 30 days)
+'''
 
 class DayValue:
     def __init__(self, newcases, newdeaths):
@@ -13,6 +16,9 @@ class County:
         self.id = id
         self.state = state
         self.neighbors = []
+        self.numDeaths = 0
+        self.numCases = 0
+    
 
     def add_neighbor(self, neighbor):
         self.neighbors.append(neighbor)
@@ -23,6 +29,10 @@ class County:
             index = county_key[n.id][0]
             adjlist.append(index)
         return adjlist
+
+    '''def return_tuple:
+        return (name, )
+        '''
     
 
 def create_county_key(counties):
