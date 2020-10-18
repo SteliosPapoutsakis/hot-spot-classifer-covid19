@@ -49,8 +49,8 @@ properties_matrix_testing = csr_matrix(properties_matrix[12:24][:], dtype=np.int
 print('Properties Training Matrix\n', properties_matrix_training)
 print('Properties Testing Matrix\n', properties_matrix_testing)
 
-labels_matrix_training = labels_matrix[:12][:]
-labels_matrix_testing = labels_matrix[12:24][:]
+labels_matrix_training = labels_matrix[:6][:]
+labels_matrix_testing = labels_matrix[6:30][:]
 
 print('Labels Training Matrix\n', labels_matrix_training)
 print('Labels Testing Matrix\n', labels_matrix_testing)
