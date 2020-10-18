@@ -68,4 +68,4 @@ def create_properties_matrix(sorted_counties):
         #print(county.return_tuple())
 
     properties_matrix = np.array(properties)
-    return coo_matrix(properties_matrix)
+    return properties_matrix

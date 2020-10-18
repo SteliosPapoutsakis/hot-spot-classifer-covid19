@@ -42,3 +42,15 @@ Final Results
 print('Adjacency List:\n', adjlists, '\n\n')
 print('Properties Matrix:\n', properties_matrix, '\n\n')
 print('Labels Matrix:\n', labels_matrix, '\n\n')
+
+properties_matrix_training = coo_matrix(properties_matrix[:12][:])
+properties_matrix_testing = coo_matrix(properties_matrix[12:][:])
+
+print('Properties Training Matrix\n', properties_matrix_training)
+print('Properties Testing Matrix\n', properties_matrix_testing)
+
+labels_matrix_training = labels_matrix[:12][:]
+labels_matrix_testing = labels_matrix[12:][:]
+
+print('Labels Training Matrix\n', labels_matrix_training)
+print('Labels Testing Matrix\n', labels_matrix_testing)
