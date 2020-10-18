@@ -3,6 +3,7 @@ import re
 import pandas
 import csv
 
+
 rx_dict =  {
     'main_county': re.compile(r'"(?P<name>([a-z]|[A-Z]| )+) County, (?P<state>[A-Z]+)"\t+(?P<id>[0-9]+)\t+"(?P<adj_name>([a-z]|[A-Z]| )+) County, (?P<adj_state>[A-Z]+)"\t+(?P<adj_id>[0-9]+)$'),
     'adjacent_county': re.compile(r'\t+"(?P<adj_name>([a-z]|[A-Z]| )+) County, (?P<adj_state>[A-Z]+)"\t+(?P<adj_id>[0-9]+)$')
@@ -37,7 +38,7 @@ def parse_county_adj(filepath):
                 state = match.group('state')
 
                 county = County(name, id, state)
-                print("Created County: ", county.name)
+                #print("Created County: ", county.name)
 
                 adj_name = match.group('adj_name')
                 adj_id = match.group('adj_id')
