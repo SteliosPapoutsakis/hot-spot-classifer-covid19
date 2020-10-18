@@ -1,14 +1,27 @@
 from county_relations import County
+from scipy import sparse
+import pickle
 import re
 import pandas
 import csv
+<<<<<<< HEAD
 import numpy as np
+=======
+
+>>>>>>> 580e5407c50770f46f0d4c26688bcff4d6537aed
 
 rx_dict =  {
     'main_county': re.compile(r'"(?P<name>([a-z]|[A-Z]| )+) County, (?P<state>[A-Z]+)"\t+(?P<id>[0-9]+)\t+"(?P<adj_name>([a-z]|[A-Z]| )+) County, (?P<adj_state>[A-Z]+)"\t+(?P<adj_id>[0-9]+)$'),
     'adjacent_county': re.compile(r'\t+"(?P<adj_name>([a-z]|[A-Z]| )+) County, (?P<adj_state>[A-Z]+)"\t+(?P<adj_id>[0-9]+)$')
 }
 
+# functions for saving the objects
+def save_sparse_matrix(matrix, file_path):
+    sparse.save_npz(file_path, matrix)
+
+def save_objects(obj, file_path):
+    with open(file_path, 'wb') as f:
+        pickle.dump(obj, f)
 
 def parse_line(line):
     '''
@@ -84,4 +97,55 @@ def create_labels_matrix(counties):
             A[index] = [1, 0]
     return A
 
+'''
+# of Deaths
+# of Cases
+# New Cases per Day (last 30 days)
+# New Deaths per Day (last 30 days)
+'''
+
+def get_county_info(filepath, counties):
+
+    with open (filepath) as csvfile:
+        reader = csv.reader(csvfile)
+        day_counter = 0
+        county_objs = {}
+        for line in reader:
+            
+            # find the county for this line
+            county_name_csv = line[0]
+            county_obj = [x for x in counties if x.name == county_name_csv]
+
+            try:
+                if county_obj != []:
+                    county_obj = county_obj[0]
+
+                    if county_name_csv in county_objs.keys():
+                        county_obj.newCases[day_counter] = line[3]
+                        county_obj.newDeaths[day_counter] = line[4]
+                        county_obj.numCases = line[1]
+                        county_obj.numDeaths = line[2]
+
+                        day_counter += 1
+                    
+                    else:
+                        day_counter = 0
+                        county_objs[county_name_csv] = county_obj
+
+            except Exception as e:
+
+                raise e
+
+
+
+                
+                
+
+            
+            
+            
+
+
+
+            
 

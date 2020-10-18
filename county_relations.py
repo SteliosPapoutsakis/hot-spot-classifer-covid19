@@ -8,6 +8,7 @@ from scipy.sparse import coo_matrix
 # New Deaths per Day (last 30 days)
 '''
 
+
 class County:
     def __init__(self, name, id, state):
         self.name = name
