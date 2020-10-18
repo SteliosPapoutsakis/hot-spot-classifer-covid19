@@ -13,6 +13,3 @@ adjlists = {}
 for count in range(len(sorted_counties)):
     adjlists[count] = sorted_counties[count].get_neighbors(county_key)
     print(count, ' ', adjlists[count])
-
-
-
