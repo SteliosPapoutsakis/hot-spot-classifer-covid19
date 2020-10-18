@@ -3,6 +3,7 @@ from scipy import sparse
 import pickle
 import re
 import pandas
+import csv
 
 
 rx_dict =  {
@@ -73,4 +74,56 @@ def parse_county_adj(filepath):
 
             line = adjfile.readline()
     return counties
+
+'''
+# of Deaths
+# of Cases
+# New Cases per Day (last 30 days)
+# New Deaths per Day (last 30 days)
+'''
+
+def get_county_info(filepath, counties):
+
+    with open (filepath) as csvfile:
+        reader = csv.reader(csvfile)
+        day_counter = 0
+        county_objs = {}
+        for line in reader:
+            
+            # find the county for this line
+            county_name_csv = line[0]
+            county_obj = [x for x in counties if x.name == county_name_csv]
+
+            try:
+                if county_obj != []:
+                    county_obj = county_obj[0]
+
+                    if county_name_csv in county_objs.keys():
+                        county_obj.newcases[day_counter] = line[3]
+                        county_obj.newdeaths[day_counter] = line[4]
+                        county_obj.numCases = line[1]
+                        county_obj.numDeaths = line[2]
+
+                        day_counter += 1
+                    
+                    else:
+                        day_counter = 0
+                        county_objs[county_name_csv] = county_obj
+
+            except Exception as e:
+
+                raise e
+
+
+
+                
+                
+
+            
+            
+            
+
+
+
+            
 
