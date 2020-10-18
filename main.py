@@ -4,7 +4,7 @@ from county_relations import *
 import numpy as np
 
 # load coo_matrix from Scipy.sparse module
-from scipy.sparse import coo_matrix
+from scipy.sparse import csr_matrix
 
 counties = []
 
@@ -43,8 +43,8 @@ print('Adjacency List:\n', adjlists, '\n\n')
 print('Properties Matrix:\n', properties_matrix, '\n\n')
 print('Labels Matrix:\n', labels_matrix, '\n\n')
 
-properties_matrix_training = coo_matrix(properties_matrix[:12][:])
-properties_matrix_testing = coo_matrix(properties_matrix[12:][:])
+properties_matrix_training = csr_matrix(properties_matrix[:12][:], dtype=np.int16)
+properties_matrix_testing = csr_matrix(properties_matrix[12:][:], dtype=np.int16)
 
 print('Properties Training Matrix\n', properties_matrix_training)
 print('Properties Testing Matrix\n', properties_matrix_testing)
